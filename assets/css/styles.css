@@ -4,6 +4,12 @@
  */
 
 /* Reset and base styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400,700;1,400,700&display=swap');
+
+:root {
+    --black: #000000;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,28 +17,73 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f8f9fa;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--back);
+    background-color: #fff;
 }
 
 /* Container */
 .container {
-    max-width: 1200px;
+    width: min(1312px, calc(100% - 40px));
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 /* Header */
 .header {
-    background-color: #fff;
     border-bottom: 1px solid #e9ecef;
     padding: 20px 0;
+    margin-bottom: 51px;
+}
+
+
+/* Utilities */
+.flexbox {
+    display: flex;
+    gap: 48px;
+    justify-content: space-between;
+}
+
+
+/* Typography */
+.h1, .h2, .h3 {
+    font-weight: 700;
 }
 
 .h1 {
-    /* Add you h1 styles here */
+    font-size: 54px;
+    line-height: 1.2;
+}
+
+.h2 {
+    font-size: 48px;
+    line-height: 1.2;
+}
+
+.h3 {
+    font-size: 24px;
+}
+
+.h4 {
+    font-size: 18px;
+}
+
+/* Button and Links */
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid var(--black);
+    color: inherit;
+    text-decoration: none;
+    transition: background-color .2s ease;
+}
+.btn:hover {
+    background-color: var(--black);
+    color: #fff;
+    text-decoration: none;
 }
 
 /* Product grid - IMPLEMENT BASED ON FIGMA DESIGN */
@@ -87,7 +138,9 @@ body {
 
 /* Responsive design */
 @media (max-width: 768px) {
-    /* Add mobile styles here */
+    .flexbox {
+        flex-direction: column;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {

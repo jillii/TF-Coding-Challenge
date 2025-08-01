@@ -86,6 +86,22 @@ body {
     text-decoration: none;
 }
 
+/* Section Header */
+.section-header-headline {
+    max-width: 677px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.section-header-copy {
+    max-width: 786px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.section-header-copy,
+.section-header-cta {
+    margin-top: 32px;
+}
+
 /* Product grid - IMPLEMENT BASED ON FIGMA DESIGN */
 .product-grid {
     /* Add your grid styles here */

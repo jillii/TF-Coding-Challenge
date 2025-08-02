@@ -29,6 +29,10 @@ section {
     padding: 112px 0;
 }
 
+img {
+    max-width: 100%;
+}
+
 /* Container */
 .container {
     width: min(1312px, calc(100% - 40px));

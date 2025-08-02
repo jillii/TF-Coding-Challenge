@@ -251,6 +251,9 @@ img {
 }
 
 @media (max-width: 768px) {
+    section {
+        padding: 64px 0;
+    }
     .h1 {
         font-size: 48px;
     }

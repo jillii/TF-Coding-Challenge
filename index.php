@@ -32,6 +32,7 @@ require_once 'includes/functions.php';
     <main class="main">
         <?php
             include 'componants/faqs-accordion.php';
+            include 'componants/product-grid.php';
         ?>
     </main>
 

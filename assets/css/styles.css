@@ -4,6 +4,12 @@
  */
 
 /* Reset and base styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400,700;1,400,700&display=swap');
+
+:root {
+    --black: #000000;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,83 +17,272 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f8f9fa;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--back);
+    background-color: #fff;
+}
+
+section {
+    padding: 112px 0;
+}
+
+img {
+    max-width: 100%;
 }
 
 /* Container */
 .container {
-    max-width: 1200px;
+    width: min(1312px, calc(100% - 40px));
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 /* Header */
 .header {
-    background-color: #fff;
     border-bottom: 1px solid #e9ecef;
     padding: 20px 0;
 }
 
-.h1 {
-    /* Add you h1 styles here */
+
+/* Utilities */
+.flexbox {
+    display: flex;
+    gap: 48px;
+    justify-content: space-between;
 }
 
-/* Product grid - IMPLEMENT BASED ON FIGMA DESIGN */
+.centered {
+    text-align: center;
+}
+.centered :is(.section-header-headline, .section-header-copy) {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Typography */
+.h1, .h2, .h3, .h4 {
+    font-weight: 700;
+}
+
+.h1 {
+    font-size: 54px;
+    line-height: 1.2;
+}
+
+.h2 {
+    font-size: 48px;
+    line-height: 1.2;
+}
+
+.h3 {
+    font-size: 24px;
+}
+
+.h4 {
+    font-size: 18px;
+}
+
+/* Button and Links */
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid var(--black);
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color .2s ease;
+}
+.btn:hover {
+    background-color: var(--black);
+    color: #fff;
+    text-decoration: none;
+}
+
+.arrow-right {
+    text-decoration: none;
+}
+
+.arrow-right:after {
+    content: url(../images/caret-right.svg);
+    display: inline-block;
+    margin-left: 8px;
+    transition: transform .2s ease;
+}
+
+.arrow-right:hover:after {
+    transform: translateX(4px);
+}
+
+.load-more {
+    margin-top: 80px;
+}
+
+/* Section Header */
+.section-header-headline {
+    max-width: 768px;
+}
+.section-header-copy {
+    max-width: 870px;
+    font-size: 18px;
+}
+.section-header-copy,
+.section-header-cta {
+    margin-top: 32px;
+}
+
+/* FAQs Accordion */
+
+.faqs-accordion {
+    flex: 1 0 732px;
+    max-width: 60%;
+}
+
+.faq {
+    border-bottom: 1px solid var(--black);
+}
+
+.faq:first-of-type {
+    border-top: 1px solid var(--black);
+}
+
+.faq-question {
+    /* Unset button styles */
+    appearance: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    background-color: transparent;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    cursor: pointer;
+}
+.faq-question .toggle {
+    pointer-events: none;
+}
+
+.faq-question .toggle::before {
+    content: url(../images/caret.svg);
+    display: block;
+    transition: rotate .2s ease;
+}
+
+.faq-answer {
+    padding-bottom: 24px;
+    transition: margin-top .2s ease;
+}
+
+.drawer {
+    overflow: hidden;
+}
+
+.faq-question.collapse .toggle:before {
+    rotate: 180deg;
+}
+
+.faq-question.collapse + .drawer .faq-answer {
+    margin-top: -100%;
+}
+
+/* Product Grid */
+
 .product-grid {
-    /* Add your grid styles here */
+    margin-top: 80px;
+    display: grid;
+    gap: 48px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
 }
 
 .product-card {
-    /* Add your card styles here */
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    color: inherit;
+    text-decoration: none;
+    animation: fadeUp 1s forwards normal ease;
 }
 
-.product-image {
-    /* Add your image styles here */
+.product-card .copy-area {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 18px 0 18px;
 }
 
-.product-info {
-    /* Add your product info styles here */
+.product-detail {
+    margin: 16px 0;
 }
 
-.product-name {
-    /* Add your product name styles here */
+.product-link {
+    margin-top: auto;
 }
 
-.product-category {
-    /* Add your category styles here */
+.product-card.hidden {
+    display: none;
 }
 
-.product-price {
-    /* Add your price styles here */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
 }
 
-.product-rating {
-    /* Add your rating styles here */
-}
-
-/* Star rating */
-.star {
-    /* Add your star styles here */
-}
-
-.star-full {
-    color: #ffc107;
-}
-
-.star-half {
-    color: #ffc107;
-}
-
-.star-empty {
-    color: #dee2e6;
-}
 
 /* Responsive design */
+@media (max-width: 1100px) {
+    .product-grid {
+        max-width: 405px;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
-    /* Add mobile styles here */
+    section {
+        padding: 64px 0;
+    }
+    .h1 {
+        font-size: 48px;
+    }
+    .h2 {
+        font-size: 36px;
+    }
+    .section-header-copy {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    .section-header-cta {
+        margin-top: 24px;
+    }
+    .flexbox {
+        flex-direction: column;
+    }
+    .faqs-accordion {
+        max-width: 100%;
+        flex-basis: auto;
+    }
+    .product-grid {
+        margin-top: 48px;
+    }
+    .product-detail {
+        margin: 12px 0 24px;
+    }
+    .load-more {
+        margin-top: 48px;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {

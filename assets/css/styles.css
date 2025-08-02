@@ -258,7 +258,11 @@ img {
         font-size: 36px;
     }
     .section-header-copy {
+        margin-top: 20px;
         font-size: 16px;
+    }
+    .section-header-cta {
+        margin-top: 24px;
     }
     .flexbox {
         flex-direction: column;

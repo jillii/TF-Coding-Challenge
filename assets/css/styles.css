@@ -53,6 +53,14 @@ img {
     justify-content: space-between;
 }
 
+.centered {
+    text-align: center;
+}
+.centered :is(.section-header-headline, .section-header-copy) {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 /* Typography */
 .h1, .h2, .h3 {

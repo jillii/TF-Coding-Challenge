@@ -25,7 +25,7 @@ require_once 'includes/functions.php';
 <body>
     <header class="header">
         <div class="container">
-            <h1>Product Details</h1>
+            <h1 class="h1">Product Details</h1>
         </div>
     </header>
 

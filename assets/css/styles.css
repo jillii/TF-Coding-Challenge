@@ -126,7 +126,8 @@ img {
     max-width: 768px;
 }
 .section-header-copy {
-    max-width: 800px;
+    max-width: 870px;
+    font-size: 18px;
 }
 .section-header-copy,
 .section-header-cta {
@@ -255,6 +256,9 @@ img {
     }
     .h2 {
         font-size: 36px;
+    }
+    .section-header-copy {
+        font-size: 16px;
     }
     .flexbox {
         flex-direction: column;

@@ -274,6 +274,15 @@ img {
         max-width: 100%;
         flex-basis: auto;
     }
+    .product-grid {
+        margin-top: 48px;
+    }
+    .product-detail {
+        margin: 12px 0 24px;
+    }
+    .load-more {
+        margin-top: 48px;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {

@@ -102,6 +102,25 @@ img {
     text-decoration: none;
 }
 
+.arrow-right {
+    text-decoration: none;
+}
+
+.arrow-right:after {
+    content: url(../images/caret-right.svg);
+    display: inline-block;
+    margin-left: 8px;
+    transition: transform .2s ease;
+}
+
+.arrow-right:hover:after {
+    transform: translateX(4px);
+}
+
+.load-more {
+    margin-top: 80px;
+}
+
 /* Section Header */
 .section-header-headline {
     max-width: 677px;

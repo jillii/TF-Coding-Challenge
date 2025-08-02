@@ -1,6 +1,4 @@
 <?php
-    include 'data/products.php';
-
     usort($products, function($a, $b) {
         // Move unavailable products to end
         $isAvailable = $b['in_stock'] <=> $a['in_stock']; // Spaceship operator for comparison
@@ -20,7 +18,7 @@
 <section id="products" class="products centered">
     <div class="container">
         <div class="products-header">
-            <?php include 'componants/section-header.php' ?>
+            <?php include 'components/section-header.php' ?>
         </div>
         <?php if ($products) : ?>
             <div id="product-grid" class="product-grid">

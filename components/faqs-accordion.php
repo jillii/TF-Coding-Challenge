@@ -9,7 +9,7 @@
     <div class="container">
         <div class="flexbox">
             <div class="faqs-header">
-                <?php include 'componants/section-header.php' ?>
+                <?php include 'components/section-header.php' ?>
             </div>
             <?php if ($faqs) : ?>
                 <div class="faqs-accordion">

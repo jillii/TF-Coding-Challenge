@@ -30,7 +30,9 @@ require_once 'includes/functions.php';
     </header>
 
     <main class="main">
-        <?php /* Add Your Code Here */ ?>
+        <?php
+            include 'componants/faqs-accordion.php';
+        ?>
     </main>
 
     <script src="assets/js/main.js"></script>

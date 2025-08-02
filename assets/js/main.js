@@ -4,12 +4,9 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Add any interactive features here
-    // Examples:
-    // - Image lazy loading
-    // - Product card hover effects
-    // - Filtering/sorting functionality
-    // - Modal for product details
+    document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', (e) => e.target.classList.toggle('collapse'))
+    })
     
     console.log('Product listing page loaded');
 });

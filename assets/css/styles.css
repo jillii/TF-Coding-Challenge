@@ -133,7 +133,61 @@ img {
     margin-top: 32px;
 }
 
+/* FAQs Accordion */
 
+.faqs-accordion {
+    flex: 1 0 732px;
+    max-width: 60%;
+}
+
+.faq {
+    border-bottom: 1px solid var(--black);
+}
+
+.faq:first-of-type {
+    border-top: 1px solid var(--black);
+}
+
+.faq-question {
+    /* Unset button styles */
+    appearance: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    background-color: transparent;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    cursor: pointer;
+}
+.faq-question .toggle {
+    pointer-events: none;
+}
+
+.faq-question .toggle::before {
+    content: url(../images/caret.svg);
+    display: block;
+    transition: rotate .2s ease;
+}
+
+.faq-answer {
+    padding-bottom: 24px;
+    transition: margin-top .2s ease;
+}
+
+.drawer {
+    overflow: hidden;
+}
+
+.faq-question.collapse .toggle:before {
+    rotate: 180deg;
+}
+
+.faq-question.collapse + .drawer .faq-answer {
+    margin-top: -100%;
+}
 
 
 
@@ -141,6 +195,9 @@ img {
 @media (max-width: 768px) {
     .flexbox {
         flex-direction: column;
+    }
+    .faqs-accordion {
+        max-width: 100%;
     }
 }
 

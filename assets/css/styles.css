@@ -133,55 +133,9 @@ img {
     margin-top: 32px;
 }
 
-/* Product grid - IMPLEMENT BASED ON FIGMA DESIGN */
-.product-grid {
-    /* Add your grid styles here */
-}
 
-.product-card {
-    /* Add your card styles here */
-}
 
-.product-image {
-    /* Add your image styles here */
-}
 
-.product-info {
-    /* Add your product info styles here */
-}
-
-.product-name {
-    /* Add your product name styles here */
-}
-
-.product-category {
-    /* Add your category styles here */
-}
-
-.product-price {
-    /* Add your price styles here */
-}
-
-.product-rating {
-    /* Add your rating styles here */
-}
-
-/* Star rating */
-.star {
-    /* Add your star styles here */
-}
-
-.star-full {
-    color: #ffc107;
-}
-
-.star-half {
-    color: #ffc107;
-}
-
-.star-empty {
-    color: #dee2e6;
-}
 
 /* Responsive design */
 @media (max-width: 768px) {

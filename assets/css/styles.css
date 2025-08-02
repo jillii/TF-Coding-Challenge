@@ -272,6 +272,7 @@ img {
     }
     .faqs-accordion {
         max-width: 100%;
+        flex-basis: auto;
     }
 }
 

@@ -25,6 +25,10 @@ body {
     background-color: #fff;
 }
 
+section {
+    padding: 112px 0;
+}
+
 /* Container */
 .container {
     width: min(1312px, calc(100% - 40px));
@@ -35,7 +39,6 @@ body {
 .header {
     border-bottom: 1px solid #e9ecef;
     padding: 20px 0;
-    margin-bottom: 51px;
 }
 
 
